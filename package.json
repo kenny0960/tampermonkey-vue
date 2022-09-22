@@ -15,16 +15,24 @@
   "scripts": {
     "dev": "dotenv -e .env.dev -- webpack-dev-server --open --config webpack.dev.js",
     "build": "dotenv -e .env -- webpack --config webpack.prod.js && dotenv -e .env -- node build.js",
-    "build:dev": "dotenv -e .env.dev -- webpack --config webpack.prod.js && dotenv -e .env.dev -- node build.js"
+    "build:dev": "dotenv -e .env.dev -- webpack --config webpack.prod.js && dotenv -e .env.dev -- node build.js",
+    "lint": "prettier --write \"src/**/*.{js,vue,scss}\""
   },
   "license": "MIT",
   "devDependencies": {
+    "@vue/eslint-config-prettier": "^7.0.0",
+    "babel-eslint": "^10.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^5.0.1",
     "dotenv-cli": "^4.0.0",
+    "eslint": "^8.23.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-vue": "^9.5.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^4.5.0",
     "node-sass": "^5.0.0",
+    "prettier": "^2.7.1",
     "sass-loader": "^10.1.0",
     "style-loader": "^2.0.0",
     "vue-loader": "^15.9.5",
